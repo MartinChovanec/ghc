@@ -1,17 +1,80 @@
 {% extends '_base.njk' %}
 
-
-{% block title %}Index page{% endblock %}
-
+{% block title %}GHC - Home{% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col p-4">
-                <p class="display-1">It works!</p>
-                <h1>This a basic template to start a website based on Bootstrap&nbsp;{{ bootstrapVersion }}</h1>
-                <p>Also check out <a href="example-page-1" class="btn btn-success btn-lg">Example page 1</a> and <a href="example-page-2" class="btn btn-danger btn-lg">Example page 2</a>.</p>
+
+<nav class="navbar navbar-expand bg-light">
+            <div class="container flex-wrap justify-content-center justify-content-sm-between">
+                <a class="navbar-brand" href="/">
+                    <img src="/logo.svg" alt="Generic Hipster Coffee" height="150" width="150">
+                </a>
+                <div class="navbar-nav ">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a class="nav-link" href="/menu">Menu</a>
+                    <a class="nav-link" href="/coffee">Coffee</a>
+                    <a class="nav-link" href="/ourstory">Our Story</a>
+                </div>
             </div>
+        </nav>
+    <h1>Generic Hipster Coffee</h1>
+    <p class="h2">Specialty coffee, fresh food &amp; local community</p>
+    <img src="/counter.jpg" alt="" class="img-fluid">
+    <!-- <div class="row">
+        <div class="col-2">
+            <h2>Opening Hours</h2>
+            <p>sunday – thursday: 8:00 – 23:00</p>
+            <p>friday – saturday: 8:00 – 1:00</p>
+        </div>
+        <div class="col-2">
+            <h2>Book a table</h2>
+            <p>Call <a href="tel:+14153214567">+1 415-321-4567</a>
+            </p>
+        </div>
+        <div class="col-2">
+            <h2>Address</h2>
+            <p>321 Ivy St.</p>
+            <p>San Francisco, CA 94102</p>
+        </div>
+        <div class="col-2">
+            <h2>Book a table</h2>
+            <p>Call <a href="tel:+14153214567">+1 415-321-4567</a>
+            </p>
+        </div>
+        <div class="col-2">
+            <h2>Address</h2>
+            <p>321 Ivy St.</p>
+            <p>San Francisco, CA 94102</p>
+        </div>
+    </div> -->
+    <div class="row">
+        <div class="col-md">
+            <h2>Opening Hours</h2>
+            <p>sunday – thursday: 8:00 – 23:00</p>
+            <p>friday – saturday: 8:00 – 1:00</p>
+        </div>
+        <div class="col-md">
+            <h2>Book a table</h2>
+            <p>Call <a href="tel:+14153214567">+1 415-321-4567</a>
+            </p>
+        </div>
+        <div class="col-md">
+            <h2>Address</h2>
+            <p>321 Ivy St.</p>
+            <p>San Francisco, CA 94102</p>
         </div>
     </div>
+    <img src="https://dummyimage.com/1092x614/000/fff&text=here+will+be+a+map" alt="" class="img-fluid">
+    <!-- <section>
+        <h2>Opening Hours</h2>
+        <p>sunday – thursday: 8:00 – 23:00</p>
+        <p>friday – saturday: 8:00 – 1:00</p>
+        <h2>Book a table</h2>
+        <p>Call <a href="tel:+14153214567">+1 415-321-4567</a>
+        </p>
+        <h2>Address</h2>
+        <p>321 Ivy St.</p>
+        <p>San Francisco, CA 94102</p> 
+        
+    </section>-->
 {% endblock %}

@@ -81,6 +81,10 @@ const startBrowsersync = () => browserSync.init({ // initalize Browsersync
     // open: false, // don’t open browser
     // ghostMode: false, // CLICKS, scrolls & form inputs on any device will not be mirrored to all others
     // reloadOnRestart: true, // reload each browser when Browsersync is restarted
+    watchOptions: {
+        poll: true,
+        ignored: "./node_modules/"
+      },
     server: {
         baseDir: 'dist', // serve from this folder
         serveStaticOptions: {
