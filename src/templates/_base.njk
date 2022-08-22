@@ -9,12 +9,12 @@
         </title>
     </head>
     <body>
-        <header class="navbar navbar-expand bg-light">
-            <nav class="container flex-wrap justify-content-center justify-content-sm-between">
-                <a class="navbar-brand" href="/">
-                    <img src="/logo.svg" alt="Generic Hipster Coffee" height="150" width="150">
+        <header class="navbar navbar-expand bg-light pt-0 pb-4">
+            <nav class="container flex-wrap justify-content-center justify-content-sm-between px-4 pt-3">
+                <a class="navbar-brand  m-0 pt-0 pb-2 pb-lg-2" href="/"> <!-- přidán mx-0, možná ovlivnín rozlišení na 1200 px-->
+                    <img src="/logo.svg" alt="Generic Hipster Coffee" height="234" width="234" class="logo">
                 </a>
-                <div class="navbar-nav gap-md-3 gap-lg-5">
+                <div class="navbar-nav gap-md-3 gap-lg-4 pb-4">
                     <a class="nav-link" href="/">Home</a>
                     <a class="nav-link active" aria-current="page" href="/menu">Menu</a>
                     <a class="nav-link" href="/coffee">Coffee</a>
@@ -25,17 +25,8 @@
         <main class="container">
             {% block content %}{% endblock %}
 
-            <!-- <nav>
-                <img src="/logo.svg" alt="" height="177" width="177">
-                <ul>
-                    <a href="/index.html">Home</a>
-                    <a href="/menu.html">Menu</a>
-                    <a href="/coffee.html">Coffee</a>
-                    <a href="/ourstory.html">Our Story</a>
-                </ul>
-            </nav> -->
         </main>
-        <footer class="bg-dark text-white">
+        <footer class="bg-dark text-light">
             <div class="container">
                 <div class="nav justify-content-center gap-sm-4">
                     <a class="nav-link text-info active" aria-current="page" href="/">Home</a>
@@ -45,8 +36,8 @@
                 </div>
             </div>
             <p class="h3 text-center">#hipstersmakecoffee</p>
-            <p class="text-center">Follow us on <a href="https://twitter.com/home">Twitter</a>
- and <a href="https://www.instagram.com/">Instagram</a>
+            <p class="text-center">Follow us on <a href="https://twitter.com/home" class="text-info">Twitter</a>
+ and <a href="https://www.instagram.com/" class="text-info">Instagram</a>
             </p>
         </footer>
 
