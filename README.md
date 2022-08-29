@@ -85,10 +85,9 @@ Upload everything in `/dist/` folder to the server.
 
 #### Surge.sh
 
-You can use [surge.sh](https://surge.sh) free service for that.
+We use [surge.sh](https://surge.sh) free service for that.
 
 1. If you don’t have a surge account: run surge client with `npx surge` in `/dist` folder to create it.
-1. Set your own domain in `package.json` (just replace `https://my-first-bootstrap-5-website.surge.sh` with yours).
 1. From now on run `npm run deploy` whenever you want to publish a new version.
 
-If you want multiple people to be able to deploy to the same domain, run `surge --add mail.your.collaborator.used.to.register.with.surge@example.com` for each.
+If you want an acces, contact me.
