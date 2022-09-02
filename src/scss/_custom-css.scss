@@ -32,13 +32,11 @@ h5,
     text-transform: uppercase;
     letter-spacing: 0.07em;
 }
-@media only screen and (min-width: 300px) {
-    .logo {
+.logo {
         height: 180px;
         width: 180px;
     }
-}
-@media only screen and (min-width: 520px) {
+@include media-breakpoint-up(sm) {
     .logo {
         height: 240px;
         width: 240px;
