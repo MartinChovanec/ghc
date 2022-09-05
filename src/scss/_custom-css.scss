@@ -33,12 +33,20 @@ h5,
     letter-spacing: 0.07em;
 }
 .logo {
-        height: 180px;
-        width: 180px;
-    }
-@include media-breakpoint-up(sm) {
+    height: 180px;
+    width: 180px;
+}
+@media only screen and (max-width: 768px) {
     .logo {
         height: 240px;
         width: 240px;
     }
 }
+/*
+@include media-breakpoint-up(md) {
+    .logo {
+        height: 240px;
+        width: 240px;
+    }
+}
+*/
