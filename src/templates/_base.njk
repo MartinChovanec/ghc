@@ -19,9 +19,9 @@
                 </a>
                 <div class="navbar-nav gap-md-3 gap-lg-4 pb-3 pb-lg-0">
                     <a class="nav-link {% block linkhome %}{% endblock %}" href="/">Home</a>
-                    <a class="nav-link" href="/menu">Menu</a>
-                    <a class="nav-link" href="/coffee">Coffee</a>
-                    <a class="nav-link" href="/ourstory">Our Story</a>
+                    <a class="nav-link {% block linkmenu %}{% endblock %}" href="/menu">Menu</a>
+                    <a class="nav-link {% block linkcoffee %}{% endblock %}" href="/coffee">Coffee</a>
+                    <a class="nav-link {% block linkstory %}{% endblock %}" href="/ourstory">Our Story</a>
                 </div>
             </nav>
         </header>
@@ -32,10 +32,10 @@
         <footer class="bg-dark text-light py-6">
             <div class="container ">
                <div class="nav justify-content-center gap-sm-4 gap-md-0">
-                    <a class="nav-link text-info active pb-0" aria-current="page" href="/">Home</a>
-                    <a class="nav-link text-info" href="/menu">Menu</a>
-                    <a class="nav-link text-info" href="/coffee">Coffee</a>
-                    <a class="nav-link text-info" href="/ourstory">Our Story</a>
+                    <a class="nav-link text-info {% block linkhomefooter %}{% endblock %}" href="/">Home</a>
+                    <a class="nav-link text-info {% block linkmenufooter %}{% endblock %}" href="/menu">Menu</a>
+                    <a class="nav-link text-info {% block linkcoffeefooter %}{% endblock %}" href="/coffee">Coffee</a>
+                    <a class="nav-link text-info {% block linkstoryfooter %}{% endblock %}" href="/ourstory">Our Story</a>
                 </div>
             </div>
             <div class="container ">
