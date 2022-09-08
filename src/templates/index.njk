@@ -6,7 +6,27 @@
 {% block content %}
   <h1 class="mt-3 pt-4 mb-3">Generic Hipster Coffee</h1>
   <p class="h2 mb-4">Specialty coffee, fresh food &amp; local community</p>
-  <img src="/counter.jpg" alt="" class="img-fluid mb-4">
+  <img
+    sizes="
+      (min-width: 1200px) 1092px,
+      (min-width: 992px) 912px,
+      (min-width: 768px) 672px,
+      (min-width: 576px) 492px,
+      calc(100vw - 2 * 1.5rem)"
+    srcset="
+      counter_272.jpg 272w,
+      counter_522.jpg 522w,
+      counter_714.jpg 714w,
+      counter_889.jpg 889w,
+      counter_1196.jpg 1196w,
+      counter_1241.jpg 1241w,
+      counter_1332.jpg 1332w,
+      counter_1469.jpg 1469w,
+      counter_2184.jpg 2184w"
+    src="counter_2184.jpg"
+    alt="" 
+    class="img-fluid mb-4"
+  >  
   <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gx-5">
     <div class="col">
       <h2 class="h4 mb-3">Opening Hours</h2>
