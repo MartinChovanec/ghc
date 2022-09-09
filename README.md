@@ -2,13 +2,8 @@
 
 The complete website of the fictional café. Created according to the graphic design.
 
-Technologies and libraries used: Bootstrap 5, Sass, Nunjuck templates, web fonts, Google Maps JS API, npm, Gulp
 
-*Work in progress
-
-# A basic template to develop a website based on Bootstrap 5
-
-Includes:
+## Used technologies:
 
 -   **Bootstrap 5**: build responsive, mobile-first projects on the web with the world's most popular front-end component library
 -   **Gulp 4**: task runner for running all of the following
@@ -57,19 +52,13 @@ npm run build
 
 `index.css` is compiled from `src/scss/index.scss` by [Sass](http://sass-lang.com/).
 
-You don't know _Scss_ syntax or don't want to use it? Just use plain CSS in `src/scss/_custom-css.scss`.
-
 ## HTML (Nunjucks templates)
 
 HTML is generated from [Nunjucks](https://mozilla.github.io/nunjucks/) templates in `src/templates`.
 
-You don't need to leverage the power of templates. You can just create plain HTML files with `*.njk` extension.
-
 If you don't want a template to be turned into HTML file start it with `_`. Typically these are templates used for _include_ or _extend_.
 
 [Documentation for Nunjucks](https://mozilla.github.io/nunjucks/templating.html).
-
-If you need some data to be available in all templates, use `templates/data.json` for that.
 
 ## Static files (JavaScript, images, …)
 
@@ -77,9 +66,7 @@ Folders and files from `/src/static/` are simply copied directly to `/dist/` fol
 
 ### Bootstrap
 
-You can comment out Bootstrap components you don't need in `/src/index.scss`.
-
-`/src/_1-customized-bootstrap-variables.scss` contains only customized Bootstrap variables. Use `/src/_4-customized-bootstrap-variables.scss` instead for your project.
+We customized Bootstrap variables in `/src/_customized-bootstrap-variables.scss`.
 
 See `browserslist` in `package.json` for supported browsers.
 
@@ -89,8 +76,9 @@ Upload everything in `/dist/` folder to the server.
 
 #### Surge.sh
 
-You can use [surge.sh](https://surge.sh) free service for that.
+We use [surge.sh](https://surge.sh) free service for that.
 
-1. run `npm run deploy` whenever you want to publish a new version.
+1. If you don’t have a surge account: run surge client with `npx surge` in `/dist` folder to create it.
+1. From now on run `npm run deploy` whenever you want to publish a new version.
 
-If you want multiple people to be able to deploy to the same domain, run `surge --add mail.your.collaborator.used.to.register.with.surge@example.com` for each.
+If you want an acces, contact me.
