@@ -1,6 +1,6 @@
 /*
 body {
-    background-image: url(design-mobile320.png);
+    background-image: url(320-mobile-2.png);
     background-repeat: no-repeat;
     background-position-x: 0;
     background-position-y: 6px;
@@ -32,19 +32,14 @@ h5,
     text-transform: uppercase;
     letter-spacing: 0.07em;
 }
-@media only screen and (min-width: 300px) {
-    .logo {
-        height: 180px;
-        width: 180px;
-    }
+.logo {
+    height: 180px;
+    width: 180px;
 }
-@media only screen and (min-width: 520px) {
+@include media-breakpoint-up(md) {
     .logo {
         height: 240px;
         width: 240px;
     }
 }
-.home-bottom-image{
-    position: relative;
-    top: 40px;
-}
+

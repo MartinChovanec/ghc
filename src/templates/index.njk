@@ -1,28 +1,228 @@
 {% extends '_base.njk' %}
 
-{% block title %}GHC - Home{% endblock %}
-
+{% block title %}Generic Hipster Coffee{% endblock %}
+{% block description %}Welcome to Generic Hipster Coffee! We look forward to welcoming you. {% endblock %}
+{% block linkhome %}active{% endblock %}
+{% block linkhomefooter %}text-light{% endblock %}
 {% block content %}
-    <h1 class="mt-lg-3 pt-lg-4">Generic Hipster Coffee</h1>
-    <p class="h2 mb-4">Specialty coffee, fresh food &amp; local community</p>
-    <img src="/counter.jpg" alt="" class="img-fluid mb-4">
-    <div class="row gx-5">
-        <div class="col-md">
-            <h2 class="h4 mb-3">Opening Hours</h2>
-            <p>sunday – thursday: 8:00 – 23:00
+  <h1 class="mt-3 pt-4 mb-3">Generic Hipster Coffee</h1>
+  <p class="h2 mb-4">Specialty coffee, fresh food &amp; local community</p>
+  <img
+    sizes="
+      (min-width: 1200px) 1092px,
+      (min-width: 992px) 912px,
+      (min-width: 768px) 672px,
+      (min-width: 576px) 492px,
+      calc(100vw - 2 * 1.5rem)"
+    srcset="
+      counter_272.jpg 272w,
+      counter_522.jpg 522w,
+      counter_714.jpg 714w,
+      counter_889.jpg 889w,
+      counter_1196.jpg 1196w,
+      counter_1241.jpg 1241w,
+      counter_1332.jpg 1332w,
+      counter_1469.jpg 1469w,
+      counter_2184.jpg 2184w"
+    src="counter_714.jpg"
+    alt="" 
+    class="img-fluid mb-4"
+  >  
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gx-5">
+    <div class="col">
+      <h2 class="h4 mb-3">Opening Hours</h2>
+      <p>sunday – thursday: 8:00 – 23:00
             <br>friday – saturday: 8:00 – 1:00</p>
-        </div>
-        <div class="col-md">
-            <h2 class="h4 mb-3">Book a table</h2>
-            <p>Call <a href="tel:+14153214567">+1 415-321-4567</a>
-            </p>
-        </div>
-        <div class="col-md">
-            <h2 class="h4 mb-3">Address</h2>
-            <p>321 Ivy St.<br>San Francisco, CA 94102</p>
-        </div>
     </div>
-    <div class="home-bottom-image mt-n5">
-        <img src="https://dummyimage.com/1092x614/000/fff&text=here+will+be+a+map" alt="" class="img-fluid overflow-visible">
+    <div class="col">
+      <h2 class="h4 mb-3">Book a table</h2>
+      <p>Call <a href="tel:+14153214567">+1 415-321-4567</a>
+      </p>
     </div>
+    <div class="col">
+      <h2 class="h4 mb-3">Address</h2>
+      <p>321 Ivy St.<br>San Francisco, CA 94102</p>
+    </div>
+  </div>
+
+<!--The div element for the map -->
+<div id="map" class="mb-n4 ratio ratio-16x9"></div>
+
+<!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXd8mwzW0g7UtZQYcbf_3mQxA01EVpl3o&callback=initMap&v=weekly"
+      defer
+    ></script>
+<script>
+  // Initialize and add the map
+  function initMap() {
+    // The location of ghc
+    const ghc = {
+      lat: 37.77723573897916,
+      lng: -122.42346597132575
+    };
+    // The map, centered at ghc
+    const map = new google
+      .maps
+      .Map(document.getElementById("map"), {
+        zoom: 18,
+        center: ghc,
+        styles: [
+          {
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#f5f5f5"
+              }
+            ]
+          }, {
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          }, {
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          }, {
+            "elementType": "labels.text.stroke",
+            "stylers": [
+              {
+                "color": "#f5f5f5"
+              }
+            ]
+          }, {
+            "featureType": "administrative.land_parcel",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#bdbdbd"
+              }
+            ]
+          }, {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#eeeeee"
+              }
+            ]
+          }, {
+            "featureType": "poi",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          }, {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#e5e5e5"
+              }
+            ]
+          }, {
+            "featureType": "poi.park",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          }, {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#ffffff"
+              }
+            ]
+          }, {
+            "featureType": "road.arterial",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          }, {
+            "featureType": "road.highway",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#dadada"
+              }
+            ]
+          }, {
+            "featureType": "road.highway",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          }, {
+            "featureType": "road.local",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          }, {
+            "featureType": "transit.line",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#e5e5e5"
+              }
+            ]
+          }, {
+            "featureType": "transit.station",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#eeeeee"
+              }
+            ]
+          }, {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#c9c9c9"
+              }
+            ]
+          }, {
+            "featureType": "water",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          }
+        ]
+      });
+    // The marker, positioned at ghc
+    const marker = new google
+      .maps
+      .Marker({position: ghc, map: map});
+  }
+
+  window.initMap = initMap;
+</script>
+
 {% endblock %}

@@ -2,9 +2,19 @@
 
 The complete website of the fictional café. Created according to the graphic design.
 
+<<<<<<< HEAD
 ## Work in progress
 
 Used technologies:
+=======
+Technologies and libraries used: Bootstrap 5, Sass, Nunjuck templates, web fonts, Google Maps JS API, npm, Gulp
+
+*Work in progress
+
+# A basic template to develop a website based on Bootstrap 5
+
+Includes:
+>>>>>>> main
 
 -   **Bootstrap 5**: build responsive, mobile-first projects on the web with the world's most popular front-end component library
 -   **Gulp 4**: task runner for running all of the following

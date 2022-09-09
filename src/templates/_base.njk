@@ -3,22 +3,32 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" href="index.css"/>
         <title>
-            {% block title %}GHC{% endblock %}
+            {% block title %}{% endblock %}
         </title>
+        <meta name="description" content="{% block description %}{% endblock %}">
     </head>
     <body>
-        <header class="navbar navbar-expand bg-light pt-0 pb-4 pb-lg-3">
-            <nav class="container flex-wrap justify-content-center justify-content-sm-between px-4 pt-3">
-                <a class="navbar-brand  m-0 pt-0 pb-2 pb-lg-0" href="/"> <!-- přidán mx-0, možná ovlivnín rozlišení na 1200 px-->
+        <header class="navbar navbar-expand bg-light pt-0 pb-0 pb-lg-3">
+            <nav class="container justify-content-sm-between justify-content-center px-4 pt-3 flex-column flex-md-row">
+                <a class="navbar-brand  m-0 pt-0 pb-2 pb-lg-0" href="/">
                     <img src="/logo.svg" alt="Generic Hipster Coffee" height="234" width="234" class="logo">
                 </a>
-                <div class="navbar-nav gap-md-3 gap-lg-4 pb-4 pb-lg-0">
-                    <a class="nav-link" href="/">Home</a>
-                    <a class="nav-link active" aria-current="page" href="/menu">Menu</a>
-                    <a class="nav-link" href="/coffee">Coffee</a>
-                    <a class="nav-link" href="/ourstory">Our Story</a>
+                <div class="navbar-nav gap-md-3 gap-lg-4 pb-3 pb-lg-0">
+                    <a class="nav-link {% block linkhome %}{% endblock %}" href="/">Home</a>
+                    <a class="nav-link {% block linkmenu %}{% endblock %}" href="/menu">Menu</a>
+                    <a class="nav-link {% block linkcoffee %}{% endblock %}" href="/coffee">Coffee</a>
+                    <a class="nav-link {% block linkstory %}{% endblock %}" href="/ourstory">Our Story</a>
                 </div>
             </nav>
         </header>
@@ -27,18 +37,20 @@
 
         </main>
         <footer class="bg-dark text-light py-6">
-            <div class="container px-2 px-md-3 mx-1 mx-md-3">
-               <div class="nav justify-content-md-center gap-sm-4 gap-md-0">
-                    <a class="nav-link text-info active pb-0" aria-current="page" href="/">Home</a>
-                    <a class="nav-link text-info" href="/menu">Menu</a>
-                    <a class="nav-link text-info" href="/coffee">Coffee</a>
-                    <a class="nav-link text-info" href="/ourstory">Our Story</a>
+            <div class="container ">
+                <div class="nav justify-content-center gap-sm-4 gap-md-0">
+                    <a class="nav-link text-info {% block linkhomefooter %}{% endblock %}" href="/">Home</a>
+                    <a class="nav-link text-info {% block linkmenufooter %}{% endblock %}" href="/menu">Menu</a>
+                    <a class="nav-link text-info {% block linkcoffeefooter %}{% endblock %}" href="/coffee">Coffee</a>
+                    <a class="nav-link text-info {% block linkstoryfooter %}{% endblock %}" href="/ourstory">Our Story</a>
                 </div>
             </div>
-            <p class="h5 text-center pt-6">#hipstersmakecoffee</p>
-            <p class="text-center">Follow us on <a href="https://twitter.com/home" class="text-info">Twitter</a>
- and <a href="https://www.instagram.com/" class="text-info">Instagram</a>
-            </p>
+            <div class="container ">
+                <p class="h5 text-center pt-6 ">#hipstersmakecoffee</p>
+                <p class="text-center">Follow us on <a href="https://twitter.com/home" class="text-info">Twitter</a>
+and <a href="https://www.instagram.com/" class="text-info">Instagram</a>
+                </p>
+            </div>
         </footer>
 
     </body>
